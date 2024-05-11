@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import NavLink from "./navLink";
+import dynamic from "next/dynamic";
 
 const links = [
   { url: "/", title: "home" },
@@ -21,6 +21,10 @@ const iconLinks = [
   { name: "pinterest", url: "#", img: "/pinterest.png" },
 ];
 
+const DynamicLinks = dynamic(() => import("./navLink"), {
+  ssr: false,
+});
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -28,7 +32,7 @@ const Navbar = () => {
       {/* Links */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
-          <NavLink link={link} key={link.title} />
+          <DynamicLinks link={link} key={link.title} />
         ))}
       </div>
       {/* Logo */}
