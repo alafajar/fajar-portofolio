@@ -1,7 +1,9 @@
+"use client";
+import TopDownPage from "@/components/topDownPage";
 import React from "react";
 
 const Portfolio = () => {
-  return <div>Portfolio</div>;
+  return <TopDownPage>Portfolio</TopDownPage>;
 };
 
 export default Portfolio;

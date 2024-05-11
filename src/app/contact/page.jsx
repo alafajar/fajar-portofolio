@@ -1,7 +1,9 @@
+"use client";
+import TopDownPage from "@/components/topDownPage";
 import React from "react";
 
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return <TopDownPage>Contact</TopDownPage>;
 };
 
 export default ContactPage;

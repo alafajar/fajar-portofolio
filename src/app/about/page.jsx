@@ -1,7 +1,9 @@
+"use client";
+import TopDownPage from "@/components/topDownPage";
 import React from "react";
 
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return <TopDownPage>About</TopDownPage>;
 };
 
 export default AboutPage;
